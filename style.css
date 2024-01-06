@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Concert+One&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Concert One', cursive;
+}
+*::selection{
+    color: antiquewhite;
+    background-color: #070809;
+}
+
+body{
+    height: 100%;
+    width: 100%;
+    padding-top: 0vh;  
+}
+#nav{
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    padding: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+#nav-part1{
+    
+    height: 82px;
+    overflow: hidden;
+}
+#nav-part1 svg{
+    display: block;
+    
+}
+#nav #nav-part2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: -50px;
+}
+
+#links{
+    padding: 10px;
+    justify-content: space-between;
+}
+#nav-part2 #links a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #060606;
+    font-weight: 100;
+    font-size: 15px;
+    margin-right: 55px; 
+}
+#icons{
+    padding: 4px 10px;
+    border-radius: 50px;
+    background-color: white;
+    justify-content: space-between;
+}
+#icons lord-icon:first-child {
+    margin-right: 50px; 
+}
+
+
+#cursor{
+    height: 150px;
+    width: 150px;
+    background-color: rgb(216, 245, 235);
+    border-radius: 50%;
+    position: fixed;
+    transform: translate(-50%,-50%) scale(0);
+}
+#page1{
+    margin-top: 140px;
+    min-height: 100vh;
+    position: relative;
+    width: 100%;
+    padding: 0 1vw;
+    padding-top: 10vh;
+}
+
+#page1 h1{
+    font-size: 19vw;
+    text-transform: uppercase;
+    line-height: 15vw;
+    font-weight: 600;
+    letter-spacing: -8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+#video-container{
+    height: 100vh;
+    width: 100%;
+    padding-top: 6vh;
+    padding-left: 5vh;
+}
+#video-container video{
+    height: 100%;
+    width: 98%;
+    object-fit: cover;
+}
+#play{
+    padding: 1.7vw 1.2vw;
+    background-color: black;
+    color: aliceblue;
+    font-size: 1.5vw;
+    position: fixed;
+    text-transform: uppercase;
+    border-radius: 50%;
+    opacity: 0;
+    scale: 0;
+}
+
+#page2{
+    height: 120vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 3vw 1.5vw;
+    justify-content: space-between;
+}
+
+#page2 .elem{
+    height: 100%;
+    width: 32%;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#page2 .elem img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    scale: 1;
+}
+#page2 .elem .dets{
+    height: 50px;
+    width: 62%;
+    border-radius: 50px;
+    position: absolute;
+    z-index: 9;
+    transition: height 0.3s ease;
+    background-color: rgb(242, 226, 220);
+}
+#page2 .elem .dets:hover{
+    height: 200px;    
+    border-radius: 25px;
+     
+}
+#page4{
+    min-height: 60vh;
+    width: 100%;
+    margin-top: -100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+#page4 .dep1{
+    padding-left: 15px;
+    width: 40%;
+}
+#page4 .dep1 h4{
+    font-size: 4vw;
+    text-transform: uppercase;
+    line-height: 4vw;
+    letter-spacing: -1px;
+
+}
+#page4 .dep2{
+    
+    width: 50%;
+    display: flex;
+    justify-content: left;
+    align-items: start;
+    padding-left: 150px;
+    padding-right: 100px;
+
+}
+
+#page4 .dep2 p{
+    display: flex;
+    justify-content:center;
+    align-items: start;
+    font-size: 1.3vw;
+    position:relative;
+    font-weight: 200;
+
+
+}
+#page4 .dep2 p span {
+    display: inline-block;
+    justify-content: center;
+    align-items:start;
+    position: absolute;
+    top:260px;
+    left: 0;
+    border-bottom: 2px solid #070809; 
+    padding: 5px;
+    font-size: 1vw;
+    font-weight: 100;
+    cursor: pointer;
+    transition: border-bottom 0.2s ease-in; 
+    
+    &:hover {
+        border-bottom: 2px solid #8f8e8e;
+    }
+  }
+
+#page3{
+    min-height: 400vh;
+    width: 100%;
+    margin-top: -50px;
+    display: flex;
+    align-items: center;
+    justify-content:  space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.child{
+    height: 55vh;
+    width: 40vw;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.child img{
+    height: 150%;
+
+}
+
+
+
+
+
+
+
+
+
+
+@media (max-width:600px){
+
+    #nav{
+        width: 100%;
+        position: fixed;
+        z-index: 99;
+        padding: 15px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between; 
+        margin-top: -100px;  
+    }
+    #nav-part1{
+        
+        height: 87px;
+        overflow: hidden;
+    }
+    #nav-part1 svg{
+        display: block;
+        height: 92px;
+        width: 90px;
+    }
+    #nav #nav-part2{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+       
+    }
+    
+    #links{
+        padding: 10px;
+        justify-content: space-between;
+        display: none;
+    }
+    #nav-part2 #links a{
+        text-transform: uppercase;
+        text-decoration: none;
+        color: #060606;
+        font-weight: 100;
+        font-size: 15px;
+        margin-right: 55px; 
+    }
+    #icons{
+        padding: 4px 10px;
+        border-radius: 50px;
+        background-color: white;
+        justify-content: space-between;
+        
+    }
+    #icons lord-icon:first-child {
+        margin-right: 50px; 
+    }
+
+
+
+
+
+    #page1 h1{
+        font-size: 15vw;
+        
+        line-height: 13vw;
+        font-weight: 600;
+        letter-spacing: -3px;
+        
+    }
+    #page1{
+        width: 100%;
+        padding: 0 1vw;
+        min-height: 40vh;
+    }
+
+    #video-container{
+        height: 28vh;
+        margin-top: 3vw;
+        padding-left: 2vh;
+    }
+    #play{
+        padding: 6.5vw 5vw;     
+        font-size: 4vw;
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        border-radius: 50%;
+        opacity: 1;
+        scale: 1;
+        transform: translate(-50%,-50%);
+    }
+    #page2{
+        min-height: 300vh;
+        width: 100%;
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 2vw 7vw;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    #page2 .elem{
+        height: 100vh;
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 1vw;
+    }
+    #page2 .elem img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        scale: 1;
+    }
+
+    #page3{
+        min-height: 120vh;
+        width: 104%;
+        margin-top: 40px;
+        display: flex;
+        align-items: center;
+        
+        flex-wrap: wrap;
+    }
+    
+    
+    .child{
+        height: 45vh;
+        width: 60vw;
+        position: relative;
+        padding: 15vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+    }
+    .child img{
+        height: 100%;
+    
+    }
+
+    #page4{
+        min-height: 50vh;
+        width: 90%;
+        margin-top: 40px;
+        display:grid;
+        align-items: center;
+        
+        margin-left: 7%;
+    }
+    #page4 .dep1{
+        padding-left: 18px;
+        padding-bottom: 20px;
+        width: 100%;
+    }
+    #page4 .dep1 h4{
+        font-size: 7vw;
+        text-transform: uppercase;
+        line-height: 7vw;
+        letter-spacing: 1px;
+    }
+    #page4 .dep2{
+        
+        width: 100%;
+        display:contents;
+        justify-content: center;
+        align-items: center;
+        
+        
+        
+    
+    }
+    
+    #page4 .dep2 p{
+        display: contents;
+        justify-content:center;
+        align-items: center;
+        font-size: 5vw;
+        position:relative;
+        font-weight: 200;
+    
+    
+    }
+    #page4 .dep2 p span {
+        
+        justify-content: center;
+        align-items:center;
+        position: relative;
+        top: -5px;
+        width: 38%;
+        border-bottom: 2px solid #070809; 
+        padding: 5px;
+        font-size: 4vw;
+        
+        cursor: pointer;
+        transition: border-bottom 0.2s ease-in; 
+        left: 25%;
+        
+        &:hover {
+            border-bottom: 2px solid #8f8e8e;
+        }
+      }
+
+}
